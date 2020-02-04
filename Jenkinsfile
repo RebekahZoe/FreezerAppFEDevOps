@@ -4,7 +4,7 @@ pipeline {
   stages {
    stage('----Build Image For Front End----'){
     steps{
-	   sh "docker build -t freezerapp ." 
+	   sh "docker build -t rebekahzoe/freezerapp ." 
     }
    }
 	  
