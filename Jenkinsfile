@@ -5,7 +5,7 @@ pipeline {
    stage('----Build Image For Front End----'){
     steps{
 	   sh "docker build -t freezer-fe ." 
-	   sh "tag freezer-fe rebekahzoe/freezerapp:$BUILD_NUMBER"
+	   sh "tag freezer-fe:latest rebekahzoe/freezerapp:$BUILD_NUMBER"
     }
    }
 	  
