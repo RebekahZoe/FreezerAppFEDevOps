@@ -8,8 +8,9 @@ pipeline {
   stages {
    stage('----Build Image For Front End----'){
     steps{
-      dockerImage = sh "docker build -t freezer-fe ."
-	    
+	    script{
+      dockerImage =  "docker build -t freezer-fe ."
+	    } 
     }
    }
 	  
@@ -23,5 +24,5 @@ pipeline {
 	   }
    }
 		   
- }
+  }
 }
