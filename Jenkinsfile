@@ -10,7 +10,6 @@ pipeline {
 	  
    stage('----Push to dockerhub----'){
 	   steps{
-		sh "docker login --username=rebekahzoe "
 		sh "docker push rebekahzoe/freezerapp"
 	   }
    }
