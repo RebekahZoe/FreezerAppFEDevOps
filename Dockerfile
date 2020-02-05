@@ -1,3 +1,3 @@
 FROM nginx
-COPY . /opt/FreezerAppFEDevOps
+COPY . 
 COPY nginx.conf /etc/nginx/nginx.conf
