@@ -6,7 +6,7 @@ pipeline {
 		  steps{
 			  sh "touch Dockerfile"
 			  sh """echo 'FROM nginx
-				COPY . /opt/FreezerAppFrontEnd
+				COPY . /FreezerAppFEDevOps
 				COPY nginx.conf /etc/nginx/nginx.conf' > Dockerfile"""
 		  }
 	  }
@@ -16,7 +16,7 @@ pipeline {
 				http {
 				server {
         				listen 80 default_server;
-        				root /opt/FreezerAppFrontEnd;
+        				root /opt/FreezerAppFEDevOps;
         				index index.html;
         				include /etc/nginx/mime.types;
         				location / {
