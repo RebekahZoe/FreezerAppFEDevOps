@@ -7,7 +7,7 @@ pipeline {
 	  
    stage('----Build Image For Front End----'){
     steps{
-	   sh "docker build -t rebekahzoe/freezerapp:latest ." 
+	   sh "docker build -t rebekahzoe/freezerappprod:latest ." 
     }
    }
 	  
@@ -15,7 +15,7 @@ pipeline {
 	   steps{
 		   
 		withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-		sh "docker push rebekahzoe/freezerapp:latest"
+		sh "docker push rebekahzoe/freezerappprod:latest"
 		}
 	   }
    }
