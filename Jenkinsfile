@@ -8,7 +8,7 @@ pipeline {
 				http {
 				server {
         				listen 80 default_server;
-        				root /opt/FreezerAppFEDevOps;
+        				root /FreezerAppFEDevOps;
         				index index.html;
         				include /etc/nginx/mime.types;
         				location / {
