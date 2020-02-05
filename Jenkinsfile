@@ -2,14 +2,6 @@ pipeline {
 	
   agent any
   stages {
-	  stage('----create dockerfile----'){
-		  steps{
-			  sh "touch Dockerfile"
-			  sh """echo 'FROM nginx
-				COPY . /FreezerAppFEDevOps
-				COPY nginx.conf /etc/nginx/nginx.conf' > Dockerfile"""
-		  }
-	  }
 	  stage('----nginx----'){
 		  steps{
 			  sh """echo 'events {}
@@ -29,6 +21,15 @@ pipeline {
 			}' >nginx.conf"""
 		  }
 	  }
+	  stage('----create dockerfile----'){
+		  steps{
+			  sh "touch Dockerfile"
+			  sh """echo 'FROM nginx
+				COPY . /FreezerAppFEDevOps
+				COPY nginx.conf /etc/nginx/nginx.conf' > Dockerfile"""
+		  }
+	  }
+	  
    stage('----Build Image For Front End----'){
     steps{
 	   sh "docker build -t rebekahzoe/freezerapp:latest ." 
