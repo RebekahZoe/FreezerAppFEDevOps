@@ -10,7 +10,7 @@ pipeline {
 				COPY nginx.conf /etc/nginx/nginx.conf' > Dockerfile"""
 		  }
 	  }
-	  stage('---nginx---'){
+	  stage('----nginx----'){
 		  steps{
 			  sh """echo 'events {}
 				http {
