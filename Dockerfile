@@ -1,3 +1,3 @@
 FROM nginx
-COPY . 
+COPY . ~/
 COPY nginx.conf /etc/nginx/nginx.conf
