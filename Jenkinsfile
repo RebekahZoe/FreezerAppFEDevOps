@@ -23,7 +23,7 @@ pipeline {
         				index index.html;
         				include /etc/nginx/mime.types;
         				location / {
-                				try_files $uri $uri/ =404;
+                				try_files /$uri /$uri/ =404;
         				}
 					location /FreezerApplication {
 						proxy_pass http://35.176.215.25:8080;
