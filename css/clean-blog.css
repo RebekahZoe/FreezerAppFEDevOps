@@ -18,7 +18,9 @@ p {
 p a {
   text-decoration: underline;
 }
-
+.h1{
+  color:purple
+}
 h1,
 h2,
 h3,
