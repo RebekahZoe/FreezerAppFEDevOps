@@ -22,6 +22,7 @@ pipeline {
 	  stage ('---ssh---'){
 		  steps{
 			  sh "ssh -T -i /home/jenkins/freezerTest.pem ubuntu@ec2-3-8-209-38.eu-west-2.compute.amazonaws.com ./frontend.sh"
+			  sh "ssh -T -i /home/jenkins/freezerTest.pem ubuntu@ec2-3-8-209-38.eu-west-2.compute.amazonaws.com ./seleniumscript.sh"
 		  }
 	  }
 		   
